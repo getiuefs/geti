@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="exp.js"></script>
+  <script type="text/javascript" src="jogo.js"></script>
+  <script type="text/javascript" src="cronometro.js"></script>
+  <script type="text/javascript" src="sintese.js"></script>
+  <script type="text/javascript" src="ranking.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.1/math.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  
+  <script src="sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+</head>
+<body onload="sintetizarApresentacao()">
+
+<div id="divindex" class="containerprincipal">
+  <input type ="submit" id= "bfacil" class="celulasindex" onclick="novoJogo(1, 'nivel fácil iniciado');transicao('divtab', 'divindex');" value="Nivel fácil">
+  <input type ="submit" id= "binter" class="celulasindex" onclick="novoJogo(2, 'nivel intermediário iniciado');transicao('divtab', 'divindex');" value="Nivel intermediário">
+  <input type ="submit" id= "bdificil" class="celulasindex" onclick="novoJogo(3, 'nivel difícil iniciado');transicao('divtab', 'divindex');" value="Nivel difícil">
+
+  <input type ="submit" id= "lbdificil" class="lbrank" name="Não há" disabled="disabled" value="Melhor tempo nivel difícil: Não há">
+  <input type ="submit" id= "lbintermediario" class="lbrank" name="Não há" disabled="disabled" value="Melhor tempo nivel intermediário: Não há">
+  <input type ="submit" id= "lbfacil" class="lbrank" name="Não há" disabled="disabled" value="Melhor tempo nivel fácil: Não há">	  
+</div>
+  
+<div id="divtab" class="container" style="display:none;">
+
+	 <input type ="submit" id= "b1" class="celulastab" name="expressao1" onclick="jogarb1()" value="">
+	 <input type ="submit" id= "b2" class="celulastab" name="expressao2" onclick="jogarb2()" value="">
+	 <input type ="submit" id= "b3" class="celulastab" name="expressao3" onclick="jogarb3()" value="">
+	 <input type ="submit" id= "b4" class="celulastab" name="expressao4" onclick="jogarb4()" value="">
+	 <input type ="submit" id= "b5" class="celulastab" name="expressao5" onclick="jogarb5()" value="">
+	 <input type ="submit" id= "b6" class="celulastab" name="expressao6" onclick="jogarb6()" value="">
+	 <input type ="submit" id= "b7" class="celulastab" name="expressao7" onclick="jogarb7()" value="">
+	 <input type ="submit" id= "b8" class="celulastab" name="expressao8" onclick="jogarb8();" value="">
+	 <input type ="submit" id= "b9" class="celulastab" name="expressao9" onclick="jogarb9();" value="">
+	 	 
+	 <div id="divinferior" class="painel">
+	 <input type ="submit" id= "bsom" class="btninferior" name="som"  value="Som: on" onclick="ativdesativSom();">
+	 <input type ="submit" id= "bpause" class="btninferior" name="pause"  value="Pause" onclick="pausar()">
+	 <input type ="submit" id= "lbresultado" class="lbinferior" disabled="disabled" value="Resultado: ">
+	 <input type ="submit" id= "lbjogadas" class="lbinferior"  disabled="disabled" value="Jogadas: ">
+	 <input type ="submit" id= "lbtempo" class="lbinferior" disabled="disabled" value="">
+	 </div>
+
+</div>
+
+
+</body>
+</html>

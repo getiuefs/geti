@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+</head>
+<body>
+    <script>
+        let pressed = {};
+        document.addEventListener('keydown', (event) => {
+        pressed[event.key] = true;
+        });
+        document.addEventListener('keyup', (event) => {
+        delete pressed[event.key];
+        });
+        responsiveVoice.speak("Bem vindo ao Brai learnin, digite 4 para ouvir os atalhos em qualquer modo de operação", "Portuguese Female");
+        document.addEventListener('keydown', (event) => {
+        if(pressed["1"]){
+            window.location.replace("view/niveis.html");
+        }else if(pressed["2"]){
+            window.location.replace("view/palavra.html");
+        }else if(pressed["3"]){
+            window.location.replace("view/livre.html");
+        }else if(pressed["4"]){
+        responsiveVoice.speak("Digite 1 para modo tutorial,neste você poderá escrever caracteres em braille, e solicitar dicas para saber os pontos que o compõem," +
+         "Digite 2 para modo palavra no qual você deverá digitar uma palavra sorteada pelo sistema "+
+         ",e digite 3 para modo livre, no qual você poderá digitar livremente. As teclas f d s j k l correspondem aos pontos"+
+         "1 2 3 4 5 e 6 da cela braille", "Portuguese Female");
+        }
+        });
+    </script>
+    <div id="main-container">
+        <div class="row">
+           <a href="view/niveis.html"> <div class="col-lg-offset-3 col-md-6 col-lg-6 btn-default">  
+                Modo Tutorial (1)
+            </div><!-- -->  </a>
+            <a href="view/palavra.html"><div class="col-lg-offset-3 col-md-6 col-lg-6 btn-default">
+                Modo Palavra (2)
+            </div></a><!-- -->
+            <a href="view/livre.html"> <div class="col-lg-offset-3 col-md-6 col-lg-6 btn-default">
+                Modo Livre (3)
+            </div></a><!-- -->
+            <div class="col-lg-offset-3 col-md-6 col-lg-6 btn-default">
+                Atalhos (4)
+            </div><!-- -->
+        </div>
+    </div><!--Fecha o container principal -->
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap1.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap2.css">
+  <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  <link rel="stylesheet" type="text/css" href="css/opendys/open-dyslexic-regular.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/stylemod2.css">
+  
+    <!-- javascript -->
+  <script src="js/responsive-voice.js"></script>
+  <script src="sweetalert.min.js"></script>
+  <script src="js/jogo.js"></script>
+  <script type="text/javascript" src="js/modulo1.js"></script>
+  <script type="text/javascript" src="js/modulo2.js"></script>
+  <script type="text/javascript" src="js/cronometro.js"></script>
+  <script type="text/javascript" src="js/sintese.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.1/math.js"></script>
+  
+  <!-- PHP -->
+  <?php
+	if(isset($_POST['enviar'])){
+	move_uploaded_file($_FILES['arquivo']['tpm_name'], ['img/' $_FILES['arquivo']['name']);
+	}
+  ?>
+  
+</head>
+
+<body onload="fadeIn();">
+
+<div id="divnav">
+<ul>
+  <li><a data-toggle="tooltip" title="Esc" href="#" onclick="showMenu();return false;">Menu inicial</a></li>
+  
+  <li><a data-toggle="tooltip" title="h" href="#" onclick="comoJogar();return false;">Como jogar?</a></li>
+  
+  <li><a href="#" onclick="MyFunction();return false;">Sobre</a></li>
+  
+  <li><a href="#">
+	<img id="imgsom" onclick="somOnOff();return false;" src="img/imglayout/soundon.png" width="30" height="30" alt="">
+  </a></li>
+</ul>
+
+<div>
+	<form method="post" action="" enctype="multiport/form-data">
+		<input type="file" name="arquivo" />
+		<input type="submit" class="btn btn-primary" value="Enviar imagem" name="enviar" />
+
+	</form>
+</div>
+
+<div id="telaprincipal" class="container" style="display:block">
+  	  <h1 id="labelprincipal" class="labelprincipal"> Easyreader </h1>
+	  
+	  <div id="divmenuinicial">
+	  <button type="button" onclick="gerarOrdem();iniciarmod1();novoJogoMod1()" class="btmenu">Módulo 1</button>
+	  <button type="button" onclick="gerarOrdem();iniciarmod2();novoJogoMod2()" class="btmenu">Módulo 2</button>
+	  <button type="button" onclick="mostrarestatisticas()" class="btmenu">Estatísticas</button>
+	  </div>
+</div>
+  
+<div id="divmodulo1" class="container" style="display:none;">
+	  <h1 class="labelsecundaria"> Monte a palavra </h1>
+		
+		
+	  <div id="divsecundariamod1">
+		<div class="box">
+		<img id="btesquerdo" src="img/imglayout/setaesquerda.png" onclick="jogar(0)" class="btseta">
+		<input type ="submit" id= "letraesquerda" class="labelletra" disabled="disabled" value="">
+		<h1 class="h1esqdir">Esquerda</h1>
+		</div>
+		
+		<div id="divimg" class="box">
+			<img id="imgmod1" class="img" style="width:100%;height:100%">
+		</div>
+		
+		<div class="box">
+		<img id="btdireito" src="img/imglayout/setadireita.png" onclick="jogar(1)" class="btseta">
+		<input type ="submit" id= "letradireita" class="labelletra" disabled="disabled" value="">
+		<h1 class="h1esqdir">Direita</h1>
+		</div>
+	  </div>
+	  
+	  <div id="divlabelsmod1">
+			<div class="box">
+				<h2 style="width:70%;" class="labelinformacao">Informe o que está na imagem através das setas!</h2>
+				<h4 id="acertos"><h4>
+			</div>
+			<div class="box">
+				<input type ="submit" id="labelresposta" disabled="disabled" value="">
+			</div>
+			<div class="box">
+				<input type ="submit" id="lbtempo" disabled="disabled" value="">
+			</div>
+	  </div>
+
+</div>
+
+<div id="divmodulo2" class="container" style="display:none;">
+      <h1 class="labelsecundaria"> Conserte a palavra </h1>
+	
+		<div style="height:55%"  class="box4">
+				<div class="box5">
+					<img id="imgmod2" class="img" style="width:90%;height:90%">
+				</div>
+				<div class="box5">
+					<input type ="submit" id= "acertos2" class ="lbmod2" disabled="disabled" value="Acertos">
+					<input type ="submit" id="lbjogadas" class ="lbmod2" disabled="disabled" value="Jogadas">
+					<input type ="submit" id="lbtempo2" disabled="disabled" value="Tempo">
+				</div>
+
+		</div>
+		<div id="box4inferior" style="height:30%"  class="box4">
+			<div class="box5">
+			<span class="word" id="word"></span>
+			</div>
+			<div class="box5" style="width:30%">
+			<h2 style="width:70%" class="labelinformacao">Pressione enter quando a palavra estiver correta!</h2>
+			</div>
+		</div>
+</div>
+
+<div id="divestatisticas" class="container" style="display:none;">
+	  <h1 class="labelsecundaria"> Seu desempenho </h1>
+
+</div>
+
+<div id="divcomojogar" class="container" style="display:none;">
+	  <h1 style="padding-bottom:10px" class="labelsecundaria"> Como jogar </h1>
+		<div class="box3">
+			<h2 style="width:50%;" class="labelinformacao">
+			O objetivo do módulo 1 é que você monte a palavra correspondente à imagem exibida
+			</h2>
+			<h2 style="width:50%;" class="labelinformacao">
+			Lorem ipsum sociosqu amet dictum tortor curae auctor diam conubia quisque sociosqu magna aptent, nulla eu quam rhoncus erat curae primis nulla faucibus curabitur purus potenti. nibh massa sagittis felis aenean integer sed lectus adipiscing, 
+			</h2>
+	   </div>
+	   
+</div>
+
+
+
+</body>
+</html>

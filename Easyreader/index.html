@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap1.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap2.css">
+  <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  <link rel="stylesheet" type="text/css" href="css/opendys/open-dyslexic-regular.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/stylemod2.css">
+  
+    <!-- javascript -->
+  <script src="js/responsive-voice.js"></script>
+  <script src="sweetalert.min.js"></script>
+  <script src="js/jogo.js"></script>
+  <script type="text/javascript" src="js/modulo1.js"></script>
+  <script type="text/javascript" src="js/modulo2.js"></script>
+  <script type="text/javascript" src="js/cronometro.js"></script>
+  <script type="text/javascript" src="js/sintese.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.1/math.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  
+  
+</head>
+
+<body onload="fadeIn();">
+
+<div id="divnav">
+<ul>
+  <li><a data-toggle="tooltip" title="Esc" href="#" onclick="showMenu();return false;">Menu inicial</a></li>
+  
+  <li><a data-toggle="tooltip" title="h" href="#" onclick="comoJogar();return false;">Como jogar?</a></li>
+  
+  <li><a href="#" onclick="sobre();return false;">Sobre</a></li>
+  
+     
+  <li><a href="#">
+	<img id="imgsom" data-toggle="tooltip" title="ctrl"  onclick="somOnOff();return false;" src="img/imglayout/soundon.png" width="30" height="30" alt="">
+  </a></li>
+  
+  <li><a href="#">
+	<button type="button" data-toggle="tooltip" title="Desabilitado" id="btnimg" data-toggle="modal" data-target="#exampleModal" disabled>
+		Inserir imagem
+	</button>
+  </a></li>
+  
+</ul>
+
+<div>
+
+	<!-- <?php -->
+   <!-- if(isset($_FILES['image'])){ -->
+      <!-- $errors= array(); -->
+      <!-- $file_name = $_FILES['image']['name']; -->
+      <!-- $file_size = $_FILES['image']['size']; -->
+      <!-- $file_tmp = $_FILES['image']['tmp_name']; -->
+      <!-- $file_type = $_FILES['image']['type']; -->
+      <!-- $file_ext=strtolower(end(explode('.',$_FILES['image']['name']))); -->
+      <!-- $extensions= array("jpeg","jpg","png"); -->
+      
+      <!-- if(in_array($file_ext,$extensions)=== false){ -->
+         <!-- $errors[]="Extensão não aceita, por favor escolha um arquivo JPEG ou PNG."; -->
+      <!-- } -->
+      
+      <!-- if($file_size > 2097152) { -->
+         <!-- $errors[]="Arquivo precisa ser menos que 2 MB"; -->
+      <!-- } -->
+      
+      <!-- if(empty($errors)==true) { -->
+         <!-- move_uploaded_file($file_tmp,"img/".$_POST["nomeimagem"].".".$file_ext); -->
+		 <!-- echo  "<script>alerta('Imagem enviada com sucesso!', 1000, ''); -->
+		 
+		 <!-- </script>"; -->
+      <!-- }else{ -->
+        <!-- // print_r($errors); -->
+      <!-- } -->
+   <!-- } -->
+	<!-- ?> -->
+	  
+</div>
+
+<div id="telaprincipal" class="container" style="display:block">
+  	  <h1 id="labelprincipal" class="labelprincipal"> Easyreader </h1>
+	  
+	  <div id="divmenuinicial">
+	  <button type="button" onclick="gerarOrdem();iniciarmod1();novoJogoMod1()" class="btmenu">Módulo 1</button>
+	  <button type="button" onclick="gerarOrdem();iniciarmod2();novoJogoMod2()" class="btmenu">Módulo 2</button>
+	  <button type="button" onclick="mostrarestatisticas()" class="btmenu">Estatísticas</button>
+	  </div>
+</div>
+  
+<div id="divmodulo1" class="container" style="display:none;">
+	  <h1 class="labelsecundaria"> Monte a palavra </h1>
+		
+		
+	  <div id="divsecundariamod1">
+		<div class="box">
+		<img id="btesquerdo" src="img/imglayout/setaesquerda.png" onclick="jogar(0)" class="btseta">
+		<input type ="submit" id= "letraesquerda" class="labelletra" disabled="disabled" value="">
+		<h1 class="h1esqdir">Esquerda</h1>
+		</div>
+		
+		<div id="divimg" class="box">
+			<img id="imgmod1" class="img" style="width:100%;height:100%">
+		</div>
+		
+		<div class="box">
+		<img id="btdireito" src="img/imglayout/setadireita.png" onclick="jogar(1)" class="btseta">
+		<input type ="submit" id= "letradireita" class="labelletra" disabled="disabled" value="">
+		<h1 class="h1esqdir">Direita</h1>
+		</div>
+	  </div>
+	  
+	  <div id="divlabelsmod1">
+			<div class="box">
+				<h2 style="width:70%;" class="labelinformacao">Informe o que está na imagem através das setas!</h2>
+				<h4 id="acertos"><h4>
+			</div>
+			<div class="box">
+				<input type ="submit" id="labelresposta" disabled="disabled" value="">
+			</div>
+			<div class="box">
+				<input type ="submit" id="lbtempo" disabled="disabled" value="">
+			</div>
+	  </div>
+
+</div>
+
+<div id="divmodulo2" class="container" style="display:none;">
+      <h1 class="labelsecundaria"> Conserte a palavra </h1>
+	
+		<div style="height:55%"  class="box4">
+				<div class="box5">
+					<img id="imgmod2" class="img" style="width:90%;height:90%">
+				</div>
+				<div class="box5">
+					<input type ="submit" id= "acertos2" class ="lbmod2" disabled="disabled" value="Acertos">
+					<input type ="submit" id="lbjogadas" class ="lbmod2" disabled="disabled" value="Jogadas">
+					<input type ="submit" id="lbtempo2" disabled="disabled" value="Tempo">
+				</div>
+
+		</div>
+		<div id="box4inferior" style="height:30%"  class="box4">
+			<div class="box5">
+			<span class="word" id="word"></span>
+			</div>
+			<div class="box5" style="width:30%">
+			<h2 style="width:70%" class="labelinformacao">Pressione enter quando a palavra estiver correta!</h2>
+			</div>
+		</div>
+</div>
+
+<div id="divestatisticas" class="container" style="display:none;">
+	  <h1 class="labelsecundaria"> Seu desempenho </h1>
+
+</div>
+
+<div id="divcomojogar" class="container" style="display:none;">
+	  <h1 style="padding-bottom:10px" class="labelsecundaria"> Como jogar </h1>
+		<div class="box3">
+			<div class="box5">
+			<h2 style="width:70%;  font-size:2.5rem" class="labelinformacao">
+			O objetivo do módulo 1 é que você forme a palavra correspondente à imagem exibida. Isso pode ser feito a partir das setas direcionais de esquerda e direita disponiveis na tela, ou a partir das setas direcionais do seu teclado.
+			</h2>
+			</div>
+			<div class="box5">
+			<h2 style="width:70%; font-size:2.5rem" class="labelinformacao">
+			O objetivo do módulo 2 é que você indique o momento em que a palavra está com sua grafia correta, relacionando-a com a imagem disponivel. Isso deve ser feito a partir da tecla de atalho Enter.
+			</h2>
+			</div>
+	   </div>
+	   
+</div>
+
+
+<div id="divsobre" class="container" style="display:none;">
+	  <h1 style="padding-bottom:10px" class="labelsecundaria"> Sobre a ferramenta </h1>
+		<div class="box4">
+			<h2 style="width:80%; text-align:justify; font-size:2.5rem" class="labelinformacao">
+			A ferramenta Easyreader, caracterizada como um objeto de aprendizagem, tem como público alvo crianças nas séries inicias de escolaridade e que tenham dislexia. Esta ferramenta visa a prática das habilidades de leitura e de escrita e o acompanhamento da evolução dos seus usuários de forma lúdica, com o objetivo de reduzir as dificuldades específicas envolvidas nesse contexto, tais como o espelhamento/rotação de letras e a relação grafema/fonema. 
+			</h2>
+	   </div>
+	   
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Insira sua imagem!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		 <form id="formimg" action = "" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" class="inputform" name = "image" />
+		 <input type="text" class="inputform" id="nomeimagem" name="nomeimagem" placeholder="Insira o nome da imagem" required="required">
+         <input type = "submit" class="inputform"/>		
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
+
+</body>
+</html>

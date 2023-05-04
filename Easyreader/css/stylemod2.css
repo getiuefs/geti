@@ -1,0 +1,84 @@
+
+.img{
+	border-radius: 25px;
+}
+
+.box4{
+	/* box-shadow:2px 2px 2px 2px black; */
+	height:40%;
+	display: flex;
+	justify-content:space-around;
+
+}
+
+#box4inferior{
+	align-items: center;
+	
+}
+
+.lbmod2{
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	height:70px;
+	background: transparent;
+	border: none;
+	text-align:center;	
+	font-size: 4rem;
+}
+
+.box5{
+	/* box-shadow:2px 2px 2px 2px black; */
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#divmodulo2{
+	display: flex;
+	
+}
+
+#lbtempo2{
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	height:70px;
+	width: 200px	;
+	background: transparent;
+	border: none;
+	text-align:center;	
+	font-size: 4rem;
+}
+
+
+.word { 
+  background-color: transparent;
+  font-family: 'OpenDyslexicRegular'; 
+  font-size: 10rem;
+  color: white;
+  line-height: 1.4em;
+  height: 1.4em;
+  padding: 0 14px 0 7px;
+  letter-spacing: 10px;
+  transition:all 0.5s ease;
+}
+
+.word:before {
+  content: '';
+  background-color: black;
+  width: 1px;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 7px;
+}
+
+
+
+
+

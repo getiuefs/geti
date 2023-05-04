@@ -1,0 +1,303 @@
+body{
+	background: #CFE5F2;
+	
+}
+ .container{
+	 overflow: hidden;
+	 background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	 width: 1100px;
+	 height: 635px;
+	 top: 10%;
+	 left: 15%;
+	 box-shadow:2px 2px 2px 2px #9fb8ad;
+	 position:absolute;
+	 z-index: 1;
+ }
+ 
+ .btmenu{
+	  display:inline-block;
+	  width: 40%;
+	  height: 40%;
+	  font-size:4rem;
+	  text-align: center;
+	  font-family: 'OpenDyslexicRegular'; 
+      font-weight: normal; 
+      font-style: normal;
+	  color:#DBE8E2;
+	  margin-left:20px;
+	  margin-top:3%;
+	 /* background-image: linear-gradient(141deg, white, #DBE8E2); */
+	  background: transparent;
+	  border: groove;
+ }
+ 
+ .h1esqdir{
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	overflow: auto;
+	margin: 0 auto;
+	width: 150px;
+	height: 40px;
+ }
+ 
+ #labelresposta{
+	
+ }
+ 
+ #lbtempo{
+	display:inline-block;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	height:70px;
+	width: 200px	;
+	background: transparent;
+	border: none;
+	text-align:center;	
+	font-size: 3rem;
+}
+ 
+ #acertos{
+	border:none;	
+	margin-top:5px;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	font-size:2.5rem;
+ }
+ 
+ .labelinformacao{
+	display: inline-block;
+	top: 10px;
+	border:none;	 
+	text-align: justify;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: bold; 
+    font-style: normal;
+	font-size: 2rem;
+	color:white;
+ }
+ 
+ .labelletra{
+	background-color:transparent;
+	height:80px;
+	width:100px;
+	margin: 0 auto;
+	float: left;
+	margin-left:37%;
+	border:none;	 
+	text-align: center;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	font-size: 5rem;
+	color:white;
+ }
+ 
+ 
+ #labelresposta{
+	display:inline-block;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	color:white;
+	height:70px;
+	width: 100%	;
+	background: transparent;
+	border: none;
+	text-align:center;	
+	font-size: 5rem;
+	margin-top:5px;
+	border: groove;
+	letter-spacing: 5px;
+ }
+ 
+ #divlabelsmod1{
+	overflow: auto;
+	width:100%;
+	height: 25%;
+	/* box-shadow:2px 2px 2px 2px black; */
+	top:30px;
+	text-align:center;
+ }
+ 
+ #divsecundariamod1{
+	 width:100%;
+	 margin-top: 5%;
+	 height:55%;
+	 text-align:center;
+ }
+ 
+ #divimg{
+	/* box-shadow:2px 2px 2px 2px black; */
+	
+ }
+ 
+ #btdireito{
+	margin-left:30px;
+	float:right;
+	cursor:pointer;
+	
+ }
+ 
+ #btesquerdo{
+	margin-right:30px;
+	float:left;
+	cursor:pointer;
+ }
+ 
+ .box{
+	display:inline-block;
+	text-align:center;
+	height: 95%;
+	width:33%;	
+	/* box-shadow:2px 2px 2px 2px black;  */
+	overflow: auto;
+ }
+ 
+ .box2{
+	display:inline-block;
+	text-align:center;
+	height: 90%;
+	width:33%;	
+	box-shadow:2px 2px 2px 2px black; 
+	overflow: auto;
+	 
+ }
+ 
+ .box3{
+	display:flex;
+	width:100%;
+	flex-direction:row;	
+	/* box-shadow:2px 2px 2px 2px black;  */
+	justify-content:space-between;
+	
+ }
+ 
+ .btseta{
+	 width: 220px;
+	 height: 180px;
+	 position:relative;
+	 
+ }
+ 
+ .btseta:active{
+	 position:relative;
+	 margin-top:5px;
+ }
+ 
+ #divmenuinicial{
+	 margin: 0 auto;
+	 height: 70%;
+	 text-align:center;
+	 display: none;
+ }
+ 
+ .labelprincipal { 
+    text-align: center;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	font-size: 10rem;
+	letter-spacing: 8px;
+	color:#DBE8E2;
+	margin-bottom:3%;
+}
+
+ .labelsecundaria { 
+    text-align: center;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	font-size: 7rem;
+	letter-spacing: 8px;
+	color:#DBE8E2;
+}
+
+
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #9fb8ad;
+	white-space: nowrap;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	text-align: center;
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	font-size: 2rem;
+	
+}
+
+li a:hover {
+    background-color: #9fb8ad;
+}
+
+
+
+.swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 1px solid #F0E1A1;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
+}
+
+.modal {
+  text-align: center;
+
+}
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.5rem; 
+  vertical-align: middle;
+  width: 100%;
+}
+
+#btnimg{
+	font-family: 'OpenDyslexicRegular'; 
+    font-weight: normal; 
+    font-style: normal;
+	font-size: 2rem;
+	background: transparent;
+	border: none;
+}
+
+
+
+
+
+

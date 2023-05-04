@@ -1,0 +1,228 @@
+/* documento de css */
+
+ .containerprincipal{
+	 overflow: hidden;
+	 background:rgb(19, 60, 93);
+	 width: 700px;
+	 height: 580px;
+	 margin-top: 2%;
+	 margin-left: 23%;
+	 box-shadow:2px 2px 2px 2px #2196F3;
+	 position:absolute;
+	 z-index: 50;
+	 transition:all 0.3s ease;
+ }
+ 
+ .container {
+	 overflow: hidden;
+	 width: 700px;
+	 height: 580px;
+	 margin-top: 1%;
+	 box-shadow:2px 2px 2px 2px #CCCCCC;
+	 background:rgba(27, 83, 127, 0.77);
+	 position:relative;
+	 z-index: 100;
+	 transition:all 0.3s ease;  
+ }
+
+ 
+ .celulasindex{
+	font-family: Lucidatypewriter, monospace;
+	font-size: 25px;
+	box-shadow:2px 2px 2px 2px #CCCCCC;
+	background:rgba(255,255,255, 0.95);
+	margin-left: 115px;
+	margin-top: 35px;
+	height: 65px;
+	width: 500px;
+	position:relative;
+	transition:all 0.5s ease;
+ }
+ 
+  .lbrank{
+	font-family: Lucidatypewriter, monospace;
+	text-align: left;
+	font-size: 20px;
+	background:rgb(255,255,255);
+	margin-left: 60px;
+	margin-top: 25px;
+	height: 50px;
+	width: 600px;
+	position:relative;
+	transition:all 0.5s ease;
+ }
+ 
+ 
+ .celulasindex:hover{
+	 background:#FFFF00;
+ }
+ 
+.painel{
+	overflow: hidden;
+	box-shadow:2px 2px 2px 2px #CCCCCC;
+	width: 670px;
+	height: 100px;
+	margin-top: 2%;
+	position:relative;
+	background:rgb(245, 222, 26);
+}
+
+.celulastab{
+	font-family: Lucidatypewriter, monospace;
+	font-size: 30px;
+	box-shadow:2px 2px 2px 2px #CCCCCC;
+	background:#FFFFFF;
+}
+
+.celulastab:hover{
+	background:#FFFF00;
+}
+
+.lbinferior{
+	width: 190px;	
+	height: 33px;
+	margin-left: 2%;
+	background:rgba(255,255,255, 0.9);
+	text-align:left;
+	font-size: 22px;
+	font-family: Lucidatypewriter, monospace;
+	box-shadow:1px 1px 1px 1px #2196F3;
+	
+}
+
+
+#lbtempo{
+	margin-left: 50%;
+	margin-top: 1%;
+	width: 130px;
+	text-align:center;	
+}
+
+#bsom{
+	box-shadow:2px 2px 2px 2px #145284;
+	margin-left: 1%;
+	margin-top:2%;
+	height: 40px;
+	width: 123px;
+	font-family: Lucidatypewriter, monospace;
+	font-size: 25px;
+	background:rgba(255,255,255, 0.9);
+	transition:all 0.5s ease;
+}
+
+#bsom:hover{
+	background:#BFEFFF;
+}
+
+#bpause{
+	box-shadow:2px 2px 2px 2px #145284;
+	margin-left: 3%;
+	margin-top:2%;
+	height: 40px;
+	width: 100px;
+	font-family: Lucidatypewriter, monospace;
+	font-size: 25px;
+	background:rgba(255,255,255, 0.9);
+	transition:all 0.5s ease;
+}
+
+#bpause:hover{
+	background:#BFEFFF;
+}
+
+#lbjogadas{
+	 margin-top: 2.5%;
+	 -webkit-transition: all 1.3s ease;
+     transition: all 1.3s ease;
+	 position: absolute;
+}
+
+#b1 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b2 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+    -webkit-transition: all 1s ease;	
+}
+
+#b3 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;	
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b4 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b5 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;	
+	transition: all 1s ease;	
+	-webkit-transition: all 1s ease;
+}
+
+#b6 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b7 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b8 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#b9 {
+	position:relative;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 180px;	
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}

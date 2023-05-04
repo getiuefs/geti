@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=30, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</head>
+<body style="background-color: black" onload="modo()">
+    <div id="main-container">
+        <div style="margin-bottom:50px" id="palavra-container">
+                <div id="image">
+                        <img  id="braille_img" src="../image/a.jpg" alt="Letra Braille" style="display:none;"/>
+                </div>
+                <text id="palavra"></text>
+        </div>
+        <textarea  style="resize:none;text-align: center;font-size:80pt;text-transform:uppercase" class="form-control" id="caixa-texto" readonly cols=15 rows=1></textarea>
+        <textarea  style="resize:none;text-align: center;font-size:80pt;" class="form-control" id="caixa-braille" readonly cols=15 rows=1></textarea>
+    </div><!--Fecha o container principal -->
+    <audio id='playAcertou' style="display:none"><source src="../assets/audio/vinhetas/acertou.mp3" type="audio/mpeg"></audio>
+</div><!--Fecha o container principal -->
+</body>
+<script  src="../assets/js/keysP.js"></script>
+</html>
